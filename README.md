@@ -1,6 +1,7 @@
 # AI-UI Backend Microservices Project 🚀
 This project consists of two microservices: `ui_service` and `ai_service`. The `ui_service` acts as the basic frontend, while the `ai_service` handles backend processing where inference of images takes place in real time using ONNX.
 
+
 ## Directory Structure 📁
 
 ```
@@ -65,6 +66,21 @@ Before you begin, ensure you have the following installed on your machine:
 - **Port**: Exposed on `8001`
 - **Health Check**: Checks the health of the service every 30 seconds.
 
+## Output 📊
+
+When you run this project and access the UI service, you'll be able to:
+
+1. Upload an image through the web interface.
+2. The image will be sent to the AI service for processing.
+3. The AI service will perform object detection using the YOLO model.
+4. The results will be sent back to the UI service.
+5. Returns a JSON response containing:
+    - **Image**: Base64 encoded image with detections.
+    - **Objects**: List of detected objects with their properties.
+    - **Count**: Number of detected objects.
+
+The output provides real-time object detection capabilities, allowing you to identify and locate various objects within the images.
+
 ## Notes 📝
 
 - Ensure that the directory structure is maintained as shown above.
@@ -80,6 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Microservices** 🌐
 - **FastAPI** ⚡
 - **ONNX** 📊
+- **YOLO** 🤖
 - **Image Processing** 🖼️
 - **Object Detection** 🔍
 - **Python** 🐍
