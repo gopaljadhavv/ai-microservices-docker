@@ -1,0 +1,28 @@
+services:
+  ui_service:
+    build:
+      context: ./ui_service
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000"
+    environment:
+      - AI_SERVICE_URL=http://ai_service:8000/detect
+    depends_on:
+      - ai_service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  ai_service:
+    build:
+      context: ./ai_service
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
