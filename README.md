@@ -252,21 +252,6 @@ curl http://localhost:8002/health
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [OpenCV Documentation](https://docs.opencv.org/)
 
-## 🚀 Future Enhancements
-
-### Planned Features
-- 🎥 **Video Support**: Real-time video stream processing
-- 🔐 **Authentication**: User authentication and rate limiting
-- 📊 **Analytics**: Detection history and statistics
-- 🎯 **Model Selection**: Support for different YOLO variants
-- ⚡ **GPU Support**: CUDA acceleration for faster inference
-- 📱 **Mobile App**: Native mobile application
-
-### Scalability
-- Load balancing for multiple AI instances
-- Redis caching for frequent requests
-- Database for result persistence
-- Message queue for async processing
 
 ## 📄 License
 
@@ -279,13 +264,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
-
-## 📞 Support
-
-For questions or issues:
-- Check the [documentation](DOCUMENTATION.md)
-- Review the [troubleshooting section](#-troubleshooting)
-- Create an issue in the repository
 
 ---
 
